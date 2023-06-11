@@ -36,9 +36,7 @@ The training dataset, named "admission_predict.csv," is a collection of records 
 ## Virtual Environment 
 
 
-To run this project without affecting your system environment, create a virtual environment by executing the following command:
-
-"Create a virtual environment to ensure that the project runs smoothly without any impact on your system's environment."
+Create a virtual environment to ensure that the project runs smoothly without any impact on your system's environment.
 
 `python -m venv <env_name>`
 
