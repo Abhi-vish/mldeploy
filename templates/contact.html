@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block container %}
+<form class="p-4 ">
+<div class="w-75 m-auto text-center">
+    <h2 class="mx-auto fs-3 pb-2" style="text-align: left;">Contact Us</h2>
+    <div class="mb-3 style="style="text-align: left;">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <div class="form-floating pb-4" style="text-align: left;">
+        <textarea class="form-control" placeholder="Write you query!!!"style="resize: none;
+        height: 200px;
+        width: 100%;" id="floatingTextarea"></textarea>
+        <label for="floatingTextarea">Description</label>
+      </div>
+      
+    <button type="submit" class="btn btn-primary " >Submit</button>
+</div>  
+</form>
+{% endblock  %}

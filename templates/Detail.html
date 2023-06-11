@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block container %}
+
+<form action="/predict" method="POST" class="p-5">
+    
+
+        <div class="container fs-5 ">
+            <div class="row">
+              <div class="col-sm">
+                <div class="mb-3">
+                    <label for="text" class="form-label">GRE Score</label>
+                    <input type="text" class="form-control" placeholder="Enter GRE Score"id="GreScore", name="GRE">
+                  </div>
+                  <div class="mb-3">
+                    <label for="University" class="form-label">University Rating</label>
+                    <input type="text" class="form-control" placeholder="Enter University Rating" id="University" name="University">
+                  </div>
+                  
+                  <div class="mb-3">
+                    <label for="text" class="form-label">LOR</label>
+                    <input type="text" class="form-control"placeholder="Enter LOR" id="LOR"name="LOR" >
+                  </div>
+                  <div class="mb-3">
+                    <label for="text" class="form-label">Research</label>
+                    <input type="" class="form-control"placeholder="Enter Research" id="Research"name="Research" >
+                  </div>
+              </div>
+              <div class="col-sm">
+                <div class="mb-3">
+                    <label for="text" class="form-label">TOEFL Score</label>
+                    <input type="text"class="form-control" name="TOFEL" placeholder="Enter TOEFL score">
+                  </div>
+                <div class="mb-3">
+                    <label for="text" class="form-label">SOP</label>
+                    <input type="text" class="form-control"placeholder="Enter SOP" id="SOP"name="SOP" >
+                  </div>
+                  <div class="mb-3">
+                    <label for="text" class="form-label">CGPA</label>
+                    <input type="text" class="form-control"placeholder="Enter CGPA" id="FGPA"name="CGPA" >
+                  </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="text-center pt-5">
+            <button type="submit" class="btn btn-primary active px-3">Predict</button>
+        </div>
+        
+  </form>
+  <hr class="my-4 px-5" style="width: 30%; ; ">
+  <div class="section mx-5 fs-5 text-black-50" style=" width: 60%;font-family: 'Nunito', sans-serif;">
+    <p style="text-align: left">GRE: Graduate Record Examination</p>
+    <p style="text-align: left">TOEFL: Test of English as a Foreign Language</p>
+    <p style="text-align: left">SOP: Statement of Purpose</p>
+    <p style="text-align: left">LOR: Letter of Recommendation</p>
+    <p style="text-align: left">CGPA: Cumulative Grade Point Average</p>
+  </div>
+
+{% endblock  %}

@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block container %}
+
+<div class="about pt-4 p-1 w-75 mx-auto text-center">
+
+    <h2 style="text-align: left ;font-family: 'Nunito', sans-serif;">Admission Prediction</h2>
+        <p class="fs-5 " style="text-align: left;">Our website offers an admission prediction feature based on a linear model trained on a dataset containing 400 records. This model aims to predict the likelihood of admission to a university based on various factors.</p>
+        
+        <h2 style="text-align: left;font-family: 'Nunito', sans-serif;">Dataset</h2>
+        <p class="fs-5 text-black-50" style="text-align: left;">The training dataset, named "admission_predict.csv," is a collection of records that includes the following features:</p>
+        <ul class="fs-5 text-black-50" style="text-align: left;">
+        <li>GRE Score: The score obtained in the Graduate Record Examination.</li>
+        <li>TOEFL Score: The score obtained in the Test of English as a Foreign Language.</li>
+        <li>University Rating: The rating of the university attended by the applicant (on a scale of 1 to 5).</li>
+        <li>Statement of Purpose (SOP): The quality of the applicant's statement of purpose (on a scale of 1 to 5).</li>
+        <li>Letter of Recommendation (LOR): The strength of the applicant's letter of recommendation (on a scale of 1 to 5).</li>
+        <li>CGPA: The Cumulative Grade Point Average achieved by the applicant.</li>
+        <li>Research: Whether or not the applicant has research experience (0 for no, 1 for yes).</li>
+    </ul>
+        <h2  style="text-align: left;font-family: 'Nunito', sans-serif;">Prediction Process</h2>
+    
+        <p class="fs-5 text-black-50" style="text-align: left;">To make a prediction, the model will ask you to provide the following information:</p>
+        
+        <ul class="text-black-50 fs-5" style="text-align: left;">
+        <li>GRE Score: Enter your GRE score.</li>
+        <li>TOEFL Score: Enter your TOEFL score.</li>
+        <li>University Rating: Provide the rating of the university you attended or wish to attend (on a scale of 1 to 5).</li>
+        <li>SOP: Rate the quality of your Statement of Purpose on a scale of 1 to 5.</li>
+        <li>LOR: Indicate the strength of your Letter of Recommendation on a scale of 1 to 5.</li>
+        <li>CGPA: Enter your Cumulative Grade Point Average.</li>
+        <li>Research: Specify whether you have research experience (0 for no, 1 for yes).</li>
+        
+    </ul>
+    <p class="fs-5 " style="text-align: left;">Based on the information you provide, the linear model will calculate the probability of admission. Please note that this prediction is an estimation and may not guarantee actual admission outcomes.</p>
+        
+        <p class="fs-5 " style="text-align: left;">Feel free to try out our admission prediction feature and gain insights into your chances of admission.</p>
+        
+</div>
+
+{% endblock  %}
