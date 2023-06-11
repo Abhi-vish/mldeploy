@@ -1,9 +1,9 @@
 from flask import Flask, jsonify, request,render_template
 import pickle
-# from sklearn.preprocessing import StandardScaler
-# from sklearn.base import BaseEstimator
-# import pandas as pd
-# import numpy as np
+from sklearn.preprocessing import StandardScaler
+from sklearn.base import BaseEstimator
+import pandas as pd
+import numpy as np
 
 app = Flask(__name__)
 
@@ -37,22 +37,25 @@ def predict():
             filename = 'model/linear_model.pickle'
             load_model = pickle.load(open(filename, 'rb'))
 
-            # df = pd.read_csv("model/Admission_Predict.csv")
-            # df.drop(columns='Serial No.',inplace=True)
-            # x = df.drop(columns=['Chance of Admit '])
+            """"
+            Loading the dataset and loading the features in variable x
+            """
+            df = pd.read_csv("model/Admission_Predict.csv")
+            df.drop(columns='Serial No.',inplace=True)
+            x = df.drop(columns=['Chance of Admit '])
 
             """
             we transfored the data using StandardScale to reduce highly correlation
             that's we again using StandardScale to pass the Actual data to model
             """
-            # scaler = StandardScaler()
-            # arr = scaler.fit_transform(x)
+            scaler = StandardScaler()
+            arr = scaler.fit_transform(x)
             # print(arr)
 
-            # data =scaler.transform([[gre_score, toefl_score, university_rating, sop, lor, cgpa, research]])
+            data =scaler.transform([[gre_score, toefl_score, university_rating, sop, lor, cgpa, research]])
 
             # Predicting the the result
-            prediction = load_model.predict([[gre_score, toefl_score, university_rating, sop, lor, cgpa, research]])
+            prediction = load_model.predict(data)
 
             
 
