@@ -47,7 +47,7 @@ Create a virtual environment to ensure that the project runs smoothly without an
 #### Install my-project in your envrionment
 
 `step1 : clone the repo` 
-- `https://github.com/Abhi-vish/mldeploy.git`
+- `git clone https://github.com/Abhi-vish/mldeploy.git`
 
 `step2 : install requirements.txt package by running commnad`
 - `pip install  -r requirements.txt`
