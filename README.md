@@ -40,6 +40,9 @@ Create a virtual environment to ensure that the project runs smoothly without an
 
 `python -m venv <env_name>`
 
+And activate virtual environment by running command
+
+`<env_name>\Scripts\activate`
 
 
 ## Installation
